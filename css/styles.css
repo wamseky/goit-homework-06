@@ -934,6 +934,5 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     gap: 24px;
   }
   .container-list-li {
-    flex-basis: calc((100% - 72px) / 4);
   }
 }
