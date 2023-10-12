@@ -393,10 +393,11 @@ ul {
   margin-bottom: 72px;
 }
 .container-img-our-team {
-  gap: 24px;
+  gap: 72px;
+  flex-wrap: wrap;
 }
 .container-pic {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   margin: 0;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -430,12 +431,18 @@ ul {
 
 .container-pic-portfolio {
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  gap: 48px;
 }
-
+.title-h-portfolio {
+  color: var(--footer-color);
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
 .container-img-portfolio {
-  width: calc((100% - 48px) / 3);
+  width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container-img-portfolio:hover {
@@ -912,27 +919,70 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 320px) {
-  .container-advantages {
+  .container {
     max-width: 288px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container-advantages {
+  .container {
     max-width: 736px;
   }
   .container-list {
-    gap: 24px 72px;
+    gap: 72px 24px;
+    justify-content: center;
+    max-width: 552px;
   }
   .container-list-li {
-    flex-basis: calc((100% - 24) / 2);
+    width: calc((100% - 24px) / 2);
+    width: 356px;
+  }
+  .container-img-our-team {
+    gap: 64px 24px;
+    display: flex;
+    justify-content: center;
+  }
+  .container-pic {
+    width: calc((100% - 24px) / 2);
+  }
+  .container-img-portfolio {
+    width: calc((100% - 24px) / 2);
+  }
+  .container-pic-portfolio {
+    gap: 72px 24px;
+  }
+  .title-h {
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 1158px) {
+.container {
+  max-width: 1128px;
+}
   .container-list {
     gap: 24px;
+    flex-wrap: nowrap;
   }
   .container-list-li {
+    width: calc((100% - 72px) / 4);
+  }
+  .title-h {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .container-list-title {
+    font-weight: 400;
+  }
+  .container-pic {
+    width: calc((100% - 72px) / 4);
+  }
+  .container-pic-portfolio {
+    gap: 48px 24px;
+  }
+  .container-img-portfolio {
+    width: calc((100% - 48px) / 3);
   }
 }
