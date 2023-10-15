@@ -329,7 +329,7 @@ text-align: center;
   background-color: var(--footer-color);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
   max-width: 320px;
-  padding: 72px 16px;
+  padding: 72px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -337,7 +337,8 @@ text-align: center;
 }
 
 .container-slogan-text {
-margin: 0 16px 72px 16px;
+margin: 0 auto;
+margin-bottom: 72px;
 }
 
 .container-button {
@@ -489,6 +490,7 @@ line-height: 40px;
 letter-spacing: 0.72px;
   font-weight: 700;
   text-align: center;
+  max-width: 208px;
 }
 
 .button-index {
@@ -954,11 +956,17 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
+  }
+  .header-svg {
+    display: none;
   }
   .container-link-header {
 display: flex;
 margin-left: 120px;
+  }
+  .container-link-header-logo {
+    margin: 25px 0 25px 0;
   }
   .container-address {
 display: block;
@@ -992,20 +1000,19 @@ letter-spacing: 0.48px;
 }
 .container-slogan-section {
   min-width: 768px;
-  padding: 0;
+  padding: 112px 0;
 }
 .container-slogan-text {
-  padding: 112px 136px 36px 136px;
-  margin: 0;
+  margin-bottom: 36px;
 }
 .container-slogan {
   margin: 0;
-  padding-bottom: 112px;
 }
 .heading {
   font-size: 56px;
 line-height: 60px;
 letter-spacing: 1.12px;
+max-width: 496px;
 }
   .container-list {
     gap: 72px 24px;
@@ -1066,6 +1073,9 @@ letter-spacing: 1.12px;
   max-width: 1128px;
   padding: 0 15px;
 }
+.header-svg {
+  display: none;
+}
 .container-link-header {
   display: flex;
     }
@@ -1079,6 +1089,7 @@ letter-spacing: 1.12px;
       letter-spacing: 0.32px;
     }
 .container-slogan-section.container-studio-section {
+  padding: 188px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -1101,14 +1112,11 @@ letter-spacing: 1.12px;
   padding: 0;
 }
 .container-slogan-text {
-  padding: 188px 0 48px;
-  margin: 0;
   max-width: 496px;
+  margin-bottom: 48px;
 }
 .container-slogan {
   margin: 0;
-  padding-bottom: 188px;
-
 }
 .heading {
   font-size: 56px;
